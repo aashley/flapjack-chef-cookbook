@@ -29,4 +29,9 @@ node['flapjack']['packages'].each do |pkg|
     end
 end
 
-
+logrotate_app "flapjack" do
+    cookbook "logrotate"
+    path ["/var/log/flapjack/*.log", "/var/log/flapjack/*.output"]
+    frequency "weekly"
+    rotate 5
+end
