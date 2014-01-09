@@ -8,6 +8,10 @@ Requirements
 This cookbook uses the prebuilt packages for Ubuntu 12.04. This installs a
 140MB debian package you might want to look into an apt cache.
 
+*Warning* the flapjack packages are not signed so this cookbook enables
+unauthenticated installation of packages by APT. Hassle the flapjack devs
+to sign their packages.
+
 #### cookbooks
 - `apt` - for registering the APT repository
 - `logrotate` - for managing the rotation of log files
@@ -44,6 +48,12 @@ Just include `flapjack` in your node's `run_list`:
   ]
 }
 ```
+
+Testing
+-------
+
+Install berkshelf and the vagrant-berkshelf plugin to test this cookbook under
+vagrant.
 
 License and Authors
 -------------------
