@@ -1,23 +1,19 @@
 flapjack Cookbook
 =================
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwhich.
+This cookbook installs the Flapjack monitoring notification system. For more
+information about Flapjack see http://flapjack.io/
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
+This cookbook uses the prebuilt packages for Ubuntu 12.04. This installs a
+140MB debian package you might want to look into an apt cache.
 
-e.g.
-#### packages
-- `toaster` - flapjack needs toaster to brown your bagel.
+#### cookbooks
+- `apt` - for registering the APT repository
+- `logrotate` - for managing the rotation of log files
 
 Attributes
 ----------
-TODO: List you cookbook attributes here.
-
-e.g.
 #### flapjack::default
 <table>
   <tr>
@@ -27,19 +23,17 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['flapjack']['bacon']</tt></td>
+    <td><tt>['flapjack']['all_environments']</tt></td>
     <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td>whether to include nodes from all environments in this Chef server
+    or just the environment this nodes is contained within</td>
+    <td><tt>false</tt></td>
   </tr>
 </table>
 
 Usage
 -----
 #### flapjack::default
-TODO: Write usage instructions for each cookbook.
-
-e.g.
 Just include `flapjack` in your node's `run_list`:
 
 ```json
@@ -51,18 +45,6 @@ Just include `flapjack` in your node's `run_list`:
 }
 ```
 
-Contributing
-------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write you change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
-
 License and Authors
 -------------------
-Authors: TODO: List authors
+Authors: Adam Ashley <aashley@adamashley.name>
