@@ -1,3 +1,6 @@
+This is deprecated. Project didn't progress at work and I never got time to
+finish this. Use https://github.com/hw-cookbooks/flapjack instead.
+
 flapjack Cookbook
 =================
 This cookbook installs the Flapjack monitoring notification system. For more
